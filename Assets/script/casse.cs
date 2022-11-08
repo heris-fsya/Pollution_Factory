@@ -10,25 +10,50 @@ public class casse : MonoBehaviour
     public GameObject[] batiment;// vide puis on charge un batiment (trouvé une supression)
     public Vector3 possition;
     public Quaternion rotation;
-    private int polution;
     private int build = -1;
     private GameObject building=null;
-    public ligneScript ligneScript;
+    //public ligneScript ligneScript;
+    public Resource_controllerScript ressource;
+    enum nom
+    {
+        Vide = -1,
+        Foret,//arbre
+        Mine,
+        UsinePhone,
+        UsineEolienne,
+        UsineCar,
+        Recyclage,
+        silo,
+        Mine2,
+        UsinePhone2,
+        UsineEolienne2,
+        UsineCar2,
+        //Recyclage2,
+        silo2,
+        sapin,
+        rocher,
 
+    }
 
+    public bool one = true;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         possition = (transform.position)+possition;
-       
+        ressource=GameObject.Find("Resource_controller").GetComponent<Resource_controllerScript>();
+        //ressource.nbr += 1;
+
         //Debug.Log();
     }
 
     // Update is called once per frame
     void Update()
     {
-        selection();
+        //selection();
+        
     }
 
     void turn()
@@ -38,37 +63,34 @@ public class casse : MonoBehaviour
 
     }
 
-    public bool one = true;
-
-    public int n = -1;
-    void selection()
-    {
-        
-        if (one  && build!=n) { creebat(n ); /*one = !one;*/ }
-        
-    }
     
-    void creebat(int n)
-    {
 
+
+
+    
+   public void creebat(int n)
+    {
+        //supresion batiment si existe
         switch (build)
         {
-            case 0: ligneScript.removeArbre(); break;
-            case 1: ligneScript.removeMine(); break;
-            case 2: ligneScript.removeUsine(); break;
-            case 3: ligneScript.removeRecyclage(); break;
+            case 0: ; break;
+            case 1: ; break;
+            case 2: ; break;
+            case 3: ; break;
             default:break;
         }
+
+        //ajout batiment
         build = n;
         switch (build)
         {
-            case 0: ligneScript.addArbre(); break;
-            case 1: ligneScript.addMine(); break;
-            case 2: ligneScript.addUsine(); break;
-            case 3: ligneScript.addRecyclage(); break;
+            case 0: ressource.addArbre(); break;
+            case 1: ressource.addMine(); break;
+            case 2: ressource.addUsine(); break;
+            case 3: ressource.addRecyclage(); break;
             default: break;
         }
-        //Debug.Log(building.IsUnityNull());
+        //
         if (building.IsUnityNull())
         {
             
@@ -76,6 +98,7 @@ public class casse : MonoBehaviour
         }
         else 
         { 
+
             Destroy(building);
             building =Instantiate(batiment[n], possition, rotation, transform);
             

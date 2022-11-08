@@ -41,9 +41,23 @@ public class interaction_groupe : MonoBehaviour
         menu_opened = true;
     }
 
-   public void placerbatiment1()
+    enum nom
     {
-        Instantiate(prefabUsine, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        Vide = -1,
+        Foret,
+        Mine,
+        Usine,
+        Recyclage,
+        Mine2,
+        Usine2,
+        Recyclage2
+
+    }
+
+    public void placerbatiment1()
+    {
+        caseSelected.GetComponent<casse>().creebat((int)nom.Usine);
+        //Instantiate(prefabUsine, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
         menu.SetActive(false);
         menu_opened = false;
         
