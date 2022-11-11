@@ -1114,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b74d3c62a6499a4ebf04f095f5f7a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextTurn: 0
   Polution: 0
   Nturn: 0
   dollard: 0
@@ -1121,11 +1122,17 @@ MonoBehaviour:
   polmine: 1
   polusine: 1
   polrecyclage: -1
-  LithiumCobalt: 0
-  Cuivre: 0
-  silicium: 0
-  Neo: 0
+  siloStockagevalue: 100
+  maxStockage: -100
+  LithiumCobaltT: 0
+  CuivreT: 0
+  SiliciumT: 0
+  NeoT: 0
+  phoneT: 0
+  batteryT: 0
+  aimantEolienneT: 0
   arbre: 0
   mine: 0
   usine: 0
+  silo: 0
   recyclage: 0
