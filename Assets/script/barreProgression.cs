@@ -69,7 +69,7 @@ public class barreProgression : MonoBehaviour
     void Update()
     {
         
-      variationBarre(0.001f);
+      //variationBarre(0.001f);
         
     }
 
