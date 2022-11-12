@@ -52,8 +52,9 @@ public class Resource_controllerScript : MonoBehaviour
 {
     public bool nextTurn;
 
-    [SerializeField]
+    //[SerializeField]
     public int Polution /*{ get; private set; }*/;
+    int maxPolution = 1000;
     //public int nbr;
     public int Nturn;//le nombre de tour fait;
 
@@ -167,7 +168,13 @@ public class Resource_controllerScript : MonoBehaviour
     }
 
     
- 
+    public float polutionBarre() 
+    {
+        float p = Polution;
+        p /= maxPolution;
+        return p;
+        
+    }
 
     void turn()// passage du tour
     {
