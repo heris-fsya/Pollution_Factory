@@ -126,10 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batiment:
   - {fileID: 919132149155446097, guid: 71c2b20233ff858489f801f8a7deb612, type: 3}
-  - {fileID: 8905003339743799313, guid: 401263d4bba8ebd45b58c59e9ca23abf, type: 3}
-  - {fileID: 8905003339743799313, guid: f85eb51fcce827b46a1e10e749db6307, type: 3}
-  - {fileID: 8905003339743799313, guid: 2302658359672ba41ad56c953c3f456f, type: 3}
-  - {fileID: 8905003339743799313, guid: 4db8cd4b6dd5b4f4da96dccbd2917ddb, type: 3}
+  - {fileID: 8905003339743799313, guid: 79fda1f8e1c30fe469a0a60c4782f55e, type: 3}
+  - {fileID: 8905003339743799313, guid: 77bcde14ed5850c4c85bbfc0d4aec508, type: 3}
+  - {fileID: 8905003339743799313, guid: 5857f9fa6bdf893439cd54f9e831e78e, type: 3}
+  - {fileID: 8905003339743799313, guid: eccb14b8606b13e45966164d475ea749, type: 3}
   - {fileID: 8739207868305546089, guid: 80bfc7d9d2d022e47b5684e91b7c17b6, type: 3}
   - {fileID: 5302818119772837979, guid: 2c24358e52ae9c04da4e803c48d4365a, type: 3}
   - {fileID: 8739207868305546089, guid: 6f195a7ed2f72fb44bc1d7fbfadc9e48, type: 3}
