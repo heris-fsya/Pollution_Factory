@@ -44,7 +44,7 @@ public class casse : MonoBehaviour
     {
         possition = (transform.position)+possition;
         ressource=GameObject.Find("Resource_controller").GetComponent<Resource_controllerScript>();
-        //ressource.nbr += 1;
+        
 
         //Debug.Log();
     }

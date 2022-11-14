@@ -52,10 +52,12 @@ public class Resource_controllerScript : MonoBehaviour
 {
     public bool nextTurn;
 
+
+
     //[SerializeField]
     public int Polution /*{ get; private set; }*/;
     int maxPolution = 1000;
-    //public int nbr;
+    
     public int Nturn;//le nombre de tour fait;
 
     
@@ -76,26 +78,19 @@ public class Resource_controllerScript : MonoBehaviour
     
 
 
-    private Ressource LithiumCobalt;
-    private Ressource Cuivre;
-    private Ressource Silicium;
-    private Ressource Neo;
+    private Ressource LithiumCobalt, Cuivre, Silicium, Neo;
+
 
     //prod ressource (nom+T pour tour l'évolution de la ressource sur un tour)
-    public int LithiumCobaltT;
-    public int CuivreT;
-    public int SiliciumT;
-    public int NeoT;
+    public int LithiumCobaltT, CuivreT, SiliciumT, NeoT;
+
 
     //prod produit (nom+T pour tour l'évolution du produit sur un tour)
     public int phoneT;
     public int batteryT;//voiture
     public int aimantEolienneT;
 
-    /*//stock produit pour géner de la polution
-    public int phone;
-    public int battery;
-    public int aimantEolienne;*/
+    
 
     //prix produit en $
     private int phoneVal=600;
@@ -107,6 +102,9 @@ public class Resource_controllerScript : MonoBehaviour
     private Ressource[] phoneRes ;
     private Ressource[] batteryRes  ;
     private Ressource[] aimantEolienneRes  ;
+    
+    
+
 
     //variable pour le passage de tour
     private int polutionT;
@@ -198,6 +196,10 @@ public class Resource_controllerScript : MonoBehaviour
         Nturn += 1;
     }
 
+    #region fontion batiment
+
+    
+
     public void addSilo() { silo++;maxStockage += siloStockagevalue; }
     public void removeSilo() { silo--; maxStockage -= siloStockagevalue; }
 
@@ -213,7 +215,7 @@ public class Resource_controllerScript : MonoBehaviour
     public void addRecyclage() { recyclage++; }
     public void removeRecyclage() { recyclage--;  }
 
-
+    #endregion
 
 
 
