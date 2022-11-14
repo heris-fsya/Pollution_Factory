@@ -37,7 +37,7 @@ public class ressourceManager : MonoBehaviour
 
     private Ressource[] nosRessources;
 
-    private Ressource Lithium, Cuivre, Silicium, Neodyme;
+    private Ressource Lithium, Cuivre, Silicium, Neodyme, Telephone, Batterie, Eolienne, Recyclage,Silo;
     [SerializeField] float polLithium, polCuivre, polSilicium, polNeodyme;
 
     private float pollutionParTours = 0f;
@@ -49,8 +49,13 @@ public class ressourceManager : MonoBehaviour
         Cuivre= new Ressource("Cuivre", 1000, 0,polCuivre);
         Silicium = new Ressource("Silicium", 5000, 0,polSilicium);
         Neodyme = new Ressource("Neodyme", 5000, 0,polNeodyme);
+        Telephone = new Ressource("Telephone", 1000, 0,0.1f);
+        Batterie = new Ressource("Batterie", 1000, 0,0.1f);
+        Eolienne = new Ressource("Eolienne", 1000, 0,0.1f);
+        Recyclage = new Ressource("Recyclage", 1000, 0,-0.4f);
+        Silo =  new Ressource("Silo", 500, 0,0f);
 
-        nosRessources = new Ressource[]{Lithium, Cuivre, Silicium, Neodyme};
+        nosRessources = new Ressource[]{Lithium, Cuivre, Silicium, Neodyme, Telephone, Batterie, Eolienne, Recyclage, Silo};
     }
 
     public float calculPollutionTour(){
@@ -75,6 +80,21 @@ public class ressourceManager : MonoBehaviour
                 break;
             case "MineNeodyme" :
                 i = 3;
+                break;
+            case "UsineTelephone" :
+                i = 4;
+                break;
+            case "UsineBatterie" :
+                i = 5;
+                break;
+            case "UsineEolienne" :
+                i = 6;
+                break;
+            case "recyclage" :
+                i = 7;
+                break;
+            case "silo" :
+                i = 8;
                 break;
             default : 
                 Debug.Log("FUCK");
