@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class casse : MonoBehaviour
 {
    
-    public GameObject[] batiment;// vide puis on charge un batiment (trouvé une supression)
+    public GameObject[] batiment;// vide puis on charge un batiment (trouvï¿½ une supression)
     public Vector3 possition;
     public Quaternion rotation;
     private int polution;
@@ -57,6 +57,7 @@ public class casse : MonoBehaviour
             case 1: ligneScript.removeMine(); break;
             case 2: ligneScript.removeUsine(); break;
             case 3: ligneScript.removeRecyclage(); break;
+            case 4: ligneScript.removeSilo(); break;
             default:break;
         }
         build = n;
@@ -66,6 +67,7 @@ public class casse : MonoBehaviour
             case 1: ligneScript.addMine(); break;
             case 2: ligneScript.addUsine(); break;
             case 3: ligneScript.addRecyclage(); break;
+            case 4: ligneScript.addSilo(); break;
             default: break;
         }
         //Debug.Log(building.IsUnityNull());

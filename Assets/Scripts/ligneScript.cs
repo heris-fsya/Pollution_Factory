@@ -15,6 +15,7 @@ public class ligneScript : MonoBehaviour
     public int arbre;
     public int mine;
     public int usine;
+    public int silo;
     public int recyclage;
     //pol val
     public int polarbre ;
@@ -62,7 +63,8 @@ public class ligneScript : MonoBehaviour
 
     public void addUsine() { usine++; polution += polusine; }
     public void removeUsine() { usine--; polution -= polusine; }
-
+    public void addSilo() { silo++;}
+    public void removeSilo() { silo--;}
     public void addRecyclage() { recyclage++; polution += recyclage; }
     public void removeRecyclage() { recyclage--; polution -= recyclage; }
 
