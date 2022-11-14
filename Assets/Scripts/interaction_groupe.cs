@@ -6,7 +6,7 @@ public class interaction_groupe : MonoBehaviour
 {
     [HideInInspector] public GameObject caseSelected;
     [SerializeField] private GameObject menu;
-    [SerializeField] GameObject prefabUsineTelephone;
+    /*[SerializeField] GameObject prefabUsineTelephone;
     [SerializeField] GameObject prefabUsineBatterie;
     [SerializeField] GameObject prefabUsineEolienne;
     [SerializeField] GameObject prefabMineLithiumCobalt;
@@ -15,7 +15,7 @@ public class interaction_groupe : MonoBehaviour
     [SerializeField] GameObject prefabMineNeodyme;
     [SerializeField] GameObject prefabRecyclage;
     [SerializeField] GameObject prefabSilo;
-    [SerializeField] GameObject prefabArbre;
+    [SerializeField] GameObject prefabArbre;*/
     private bool menu_opened = false;
     private bool touch_me = false;
 
@@ -43,59 +43,82 @@ public class interaction_groupe : MonoBehaviour
         menu_opened = true;
     }
 
-   public void placerUsineTelephone()
+    enum nom
     {
-        Instantiate(prefabUsineTelephone, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
+        Vide = -1,
+        Foret,//arbre
+        MineLithiumCobalt,
+        MineCuivre,
+        MineSilicium,
+        MineNeodyme,
+        UsinePhone,
+        UsineEolienne,
+        UsineCar,
+        Recyclage,
+        silo,
+        Mine2,// le meme que le 1 en model 3d
+        UsinePhone2,
+        UsineEolienne2,
+        UsineCar2,
+        //Recyclage2,
+        silo2,
+        sapin,
+        rocher,
+    }
+
+    public void placerUsineTelephone()
+    {
+        caseSelected.GetComponent<casse>().creebat((int)nom.UsinePhone);
+         menu.SetActive(false);
         menu_opened = false;
         
         
     }
 
     public void placerUsineBatterie() {
-        Instantiate(prefabUsineBatterie, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.UsineCar);
         menu.SetActive(false);
         menu_opened = false;
     }
 
 public void placerUsineEolienne() {
-        Instantiate(prefabUsineEolienne, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.UsineEolienne);
         menu.SetActive(false);
         menu_opened = false;
     }
 
      public void placerMineLithiumCobalt() {
-        Instantiate(prefabMineLithiumCobalt, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.MineLithiumCobalt);
         menu.SetActive(false);
         menu_opened = false;
     }
 
     public void placerMineCuivre() {
-        Instantiate(prefabMineCuivre, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.MineCuivre);
         menu.SetActive(false);
         menu_opened = false;
     }
 
     public void placerMineSilicium() {
-        Instantiate(prefabMineSilicium, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.MineSilicium);
         menu.SetActive(false);
         menu_opened = false;
     }
 
     public void placerMineNeodyme() {
-        Instantiate(prefabMineNeodyme, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.MineNeodyme);
         menu.SetActive(false);
         menu_opened = false;
     }
 
     public void placerRecyclage() {
-        Instantiate(prefabRecyclage, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.Recyclage);
         menu.SetActive(false);
         menu_opened = false;
     }
 
     public void placerSilo() {
-        Instantiate(prefabSilo, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
+        caseSelected.GetComponent<casse>().creebat((int)nom.silo);
         menu.SetActive(false);
         menu_opened = false;
     }

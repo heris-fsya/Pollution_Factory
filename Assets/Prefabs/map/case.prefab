@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6301492421260343673}
   - component: {fileID: 6301492421260343672}
   - component: {fileID: 6301492421260343676}
-  - component: {fileID: -1398046457663060432}
+  - component: {fileID: 435372660225117051}
   m_Layer: 0
   m_Name: case
   m_TagString: Untagged
@@ -109,19 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6301492421260343675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bffeff4789c183345a212978b0aa1dae, type: 3}
+  m_Script: {fileID: 11500000, guid: 65ad4eb7c4b4c774d8a2493a374239e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batiment:
-  - {fileID: 4316765574376759125, guid: 86da7ba5aae17414e84da4c754e37b75, type: 3}
-  - {fileID: 4389737627837247007, guid: b3bde6bf12f079e4b873d91f59615e1e, type: 3}
-  - {fileID: 8739207868305546089, guid: 80bfc7d9d2d022e47b5684e91b7c17b6, type: 3}
-  - {fileID: 5302818119772837979, guid: 019565db7fa30684c97d8031b5dc233f, type: 3}
-  possition: {x: 0, y: 0, z: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
-  ressource: {fileID: 0}
-  one: 1
---- !u!114 &-1398046457663060432
+--- !u!114 &435372660225117051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +121,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 6301492421260343675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5974152704563f24eb0ed875c48b90aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e7d7d05cc5efff4986ac6edc6e312c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batiment:
+  - {fileID: 919132149155446097, guid: 71c2b20233ff858489f801f8a7deb612, type: 3}
+  - {fileID: 8905003339743799313, guid: 401263d4bba8ebd45b58c59e9ca23abf, type: 3}
+  - {fileID: 8905003339743799313, guid: f85eb51fcce827b46a1e10e749db6307, type: 3}
+  - {fileID: 8905003339743799313, guid: 2302658359672ba41ad56c953c3f456f, type: 3}
+  - {fileID: 8905003339743799313, guid: 4db8cd4b6dd5b4f4da96dccbd2917ddb, type: 3}
+  - {fileID: 8739207868305546089, guid: 80bfc7d9d2d022e47b5684e91b7c17b6, type: 3}
+  - {fileID: 5302818119772837979, guid: 2c24358e52ae9c04da4e803c48d4365a, type: 3}
+  - {fileID: 8739207868305546089, guid: 6f195a7ed2f72fb44bc1d7fbfadc9e48, type: 3}
+  - {fileID: 5302818119772837979, guid: 019565db7fa30684c97d8031b5dc233f, type: 3}
+  - {fileID: 5302818119772837979, guid: 360504d3b45e2084ca9fe43aae62be98, type: 3}
+  - {fileID: 4389737627837247007, guid: b3bde6bf12f079e4b873d91f59615e1e, type: 3}
+  - {fileID: 8739207868305546089, guid: a2694a1c1416f7e43a5ff1a91b4fdb13, type: 3}
+  - {fileID: 5302818119772837979, guid: c26b347c3f7d29f44a423cd8a4341a1b, type: 3}
+  - {fileID: 8739207868305546089, guid: 512bf3d766dd2b546943b4ca9b3abbe5, type: 3}
+  - {fileID: 4316765574376759125, guid: 4f0b297101ee7944eb26dca6717b9ad8, type: 3}
+  - {fileID: 3324496491112018799, guid: 30ed2c69fc38cda4c9b792380718295d, type: 3}
+  possition: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
+  ressource: {fileID: 0}
+  one: 1
