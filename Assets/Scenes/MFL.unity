@@ -3465,16 +3465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa1ea6320d5bc5419876a47992c29da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextTurn: 0
   Polution: 0
   Nturn: 0
   dollard: 0
-  polarbre: -1
-  polmine: 1
-  polusine: 1
-  polrecyclage: -1
-  siloStockagevalue: 100
-  maxStockage: -100
   LithiumCobaltT: 0
   CuivreT: 0
   SiliciumT: 0
@@ -3482,11 +3475,22 @@ MonoBehaviour:
   phoneT: 0
   batteryT: 0
   aimantEolienneT: 0
+  polarbre: -1
+  polmine: 1
+  polusine: 1
+  polrecyclage: -1
+  siloStockagevalue: 100
+  maxStockage: -100
   arbre: 0
-  mine: 0
-  usine: 0
-  silo: 0
+  MineLithiumCobalt: 0
+  MineCuivre: 0
+  MineSilicium: 0
+  MineNeodyme: 0
+  UsinePhone: 0
+  UsineEolienne: 0
+  UsineCar: 0
   recyclage: 0
+  silo: 0
 --- !u!4 &1535224175
 Transform:
   m_ObjectHideFlags: 0
