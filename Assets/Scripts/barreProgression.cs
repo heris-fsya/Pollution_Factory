@@ -11,7 +11,7 @@ public class barreProgression : MonoBehaviour
     //public Resource_controllerScript ressource;
     //ressource=GameObject.Find("Resource_controller").GetComponent<Resource_controllerScript>();
 
-    static Image Barre;
+    [SerializeField] Image Barre;
 
     [SerializeField] GameObject TMPpourcentage;
     private TextMeshProUGUI textPourcentage;
@@ -46,7 +46,7 @@ public class barreProgression : MonoBehaviour
     void Start()
     {
         
-        Barre = GetComponent<Image> ();
+       // Barre = GetComponent<Image> ();
 
         /*
         if(Barre != null){ 

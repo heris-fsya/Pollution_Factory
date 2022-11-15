@@ -18,8 +18,7 @@ public class interaction_groupe : MonoBehaviour
     [SerializeField] GameObject prefabSilo;
     [SerializeField] GameObject prefabArbre;
     private bool menu_opened = false;
-
-
+    private bool touch_me = false;
     [SerializeField] int startMoney;
 
     [SerializeField] ressourceManager r;
@@ -27,12 +26,13 @@ public class interaction_groupe : MonoBehaviour
     [SerializeField] GameObject TMPargent;
     private TextMeshProUGUI textArgent;
 
-    void Start(){
+
+    void Start()
+    {
         this.textArgent = TMPargent.GetComponent<TextMeshProUGUI>();
 
         textArgent.SetText("Argent : " + r.getArgent());
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -57,86 +57,122 @@ public class interaction_groupe : MonoBehaviour
         menu_opened = true;
     }
 
+    enum nom
+    {
+        Vide = -1,
+        Foret,//arbre
+        MineLithiumCobalt,
+        MineCuivre,
+        MineSilicium,
+        MineNeodyme,
+        UsinePhone,
+        UsineEolienne,
+        UsineCar,
+        Recyclage,
+        silo,
+        Mine2,// le meme que le 1 en model 3d
+        UsinePhone2,
+        UsineEolienne2,
+        UsineCar2,
+        //Recyclage2,
+        silo2,
+        sapin,
+        rocher,
+    }
 
-    public void placerBatiment(GameObject obj){
+
+
+
+
+
+
+    public void placerBatiment(GameObject obj)
+    {
         Ressource re = r.trouveRessource(obj);
-        if(re != null){
-            if(r.argentOK(re)){
+        if (re != null)
+        {
+            if (r.argentOK(re))
+            {
                 r.buy(re);
                 Instantiate(obj, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
                 menu.SetActive(false);
                 menu_opened = false;
                 textArgent.SetText("Argent : " + r.getArgent());
             }
-            else{
+            else
+            {
                 Debug.Log("Argent insuffisant");
             }
         }
-        else{
+        else
+        {
             Debug.Log("ressource pas trouvé");
         }
-        
-        
+
+
 
     }
+    /* public void placerUsineTelephone()
+     {
+         caseSelected.GetComponent<casse>().creebat((int)nom.UsinePhone);
+          menu.SetActive(false);
+         menu_opened = false;
 
 
-    /*
-   public void placerUsineTelephone()
-    {
-        Instantiate(prefabUsineTelephone, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-        
-        
-    }
+     }
 
-    public void placerUsineBatterie() {
-        Instantiate(prefabUsineBatterie, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+     public void placerUsineBatterie() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.UsineCar);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-    public void placerUsineEolienne() {
-        Instantiate(prefabUsineEolienne, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+ public void placerUsineEolienne() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.UsineEolienne);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-     public void placerMineLithiumCobalt() {
-        Instantiate(prefabMineLithiumCobalt, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+      public void placerMineLithiumCobalt() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.MineLithiumCobalt);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-    public void placerMineCuivre() {
-        Instantiate(prefabMineCuivre, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+     public void placerMineCuivre() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.MineCuivre);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-    public void placerMineSilicium() {
-        Instantiate(prefabMineSilicium, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+     public void placerMineSilicium() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.MineSilicium);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-    public void placerMineNeodyme() {
-        Instantiate(prefabMineNeodyme, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+     public void placerMineNeodyme() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.MineNeodyme);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-    public void placerRecyclage() {
-        Instantiate(prefabRecyclage, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+     public void placerRecyclage() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.Recyclage);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
 
-    public void placerSilo() {
-        Instantiate(prefabSilo, caseSelected.transform.position, caseSelected.transform.rotation, caseSelected.transform);
-        menu.SetActive(false);
-        menu_opened = false;
-    }
+     public void placerSilo() {
+         caseSelected.GetComponent<casse>().creebat((int)nom.silo);
+         menu.SetActive(false);
+         menu_opened = false;
+     }
     */
+    public void close()
+    {
+       
+        menu.SetActive(false);
+        menu_opened = false;
+    }
 }
